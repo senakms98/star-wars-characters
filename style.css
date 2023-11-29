@@ -1,3 +1,9 @@
+body {
+    background-image: url("sww.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .green-btn {
     background-color: green;
 }

@@ -121,3 +121,22 @@
     ];
 
     const btnAdd = document.querySelector(".green-btn");
+    const charactersEl = document.getElementById("characters");
+
+    for (i = 0; i < characters.length; i++) { 
+      const character = characters[i];
+      const characterPic = character.pic;
+      const characterName = character.name;
+      const characterhomeWorld = character.homeworld;
+    charactersEl.innerHTML += `
+    <div class="col-lg-3">
+    <div class="card">
+      <img src="${characterPic}" class="card-img-top" alt="character">
+      <div class="card-body text-center">
+        <h3 class="card-name">${characterName}</h3>
+        <h5 class="homeworld">${characterhomeWorld}</h5>
+      </div>
+    </div>
+    </div>
+    `;
+  }
