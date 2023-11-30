@@ -12,14 +12,18 @@
     <link rel="stylesheet" href="style.css" />
     <title>Star Wars</title>
   </head>
-  <body>
-    <button class="green-btn" onclick="renderCharacters()">
-      Karakterleri Göster
-    </button>
 
-    <div class="container" id="characters">
-      <div class="row"></div>
-    </div>
+  <body>
+    <section>
+      <div class="container">
+        <button class="toggle-button" onclick="renderCharacters()">
+          Karakterleri Göster
+        </button>
+        <div id="filters"></div>
+        <div id="content"></div>
+      </div>
+    </section>
+
     <script src="main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

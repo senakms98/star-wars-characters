@@ -4,6 +4,7 @@ body {
     background-size: 100%;
 }
 
-.green-btn {
+.toggle-button {
     background-color: green;
+    color: white
 }
