@@ -140,9 +140,11 @@
 
     for (const homeworld of homeworlds) {
       const RadioElement = ` 
+<div class="container mt-5 bg-white w-100 justify-content-center align-items-center d-inline-flex">
       <div class="form-check">
-      <input value="${homeworld}" class="form-check-input" type="radio" name="homeworld-radio" id="radio-${homeworld}">
+      <input value="${homeworld}" class="form-check-input d-inline-flex" type="radio" name="homeworld-radio" id="radio-${homeworld}">
       <label class="form-check-label" for="radio-${homeworld}">${homeworld}</label>
+      </div>
       </div>
       `;
 
@@ -190,7 +192,7 @@ renderCharacters();
 row_element.innerHTML = row_element.innerHTML + CharacterCard;
 }
     
-toggle_button.innerHTML = "Karakterleri Gizle";
+toggle_button.innerHTML = "Hide Characters";
 
 toggle_button.onclick = removeCharacters;
 }
@@ -200,5 +202,5 @@ content_wrapper.appendChild(row_element);
       content_wrapper.innerHTML = "";
       toggle_button.onclick = renderCharacters;
       
-      toggle_button.innerText = "Karakterleri Göster";
+      toggle_button.innerText = "Display Characters";
     }

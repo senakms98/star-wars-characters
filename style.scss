@@ -3,69 +3,45 @@ body {
   background-repeat: repeat;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
+.click-btn {
   display: flex;
-  position: relative;
-  background: #1e1e24;
-  align-items: center;
+  width: $button-width;
+  height: 40px;
   justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  line-height: 35px;
+  border: 1px solid;
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.35s;
+  box-sizing: border-box;
 }
 
-$speed: 0.5s;
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .toggle-button {
-  opacity: 1;
-  outline: 0;
+  $btn-color1: #716eef;
+  $btn-color2: #fbb8a9;
+  $btn-gradient: #c15b44;
+  border-color: $btn-color1;
   color: #fff;
-  line-height: 40px;
-  position: relative;
-  text-align: center;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-decoration: none;
-  font-family: "Open Sans";
-  text-transform: uppercase;
-
+  background: repeating-linear-gradient(
+    40deg,
+    $btn-color1 0%,
+    $btn-color1 5%,
+    $btn-color2 5%,
+    $btn-gradient 10%
+  );
+  text-shadow: 1px 1px 0em #000;
   &:hover {
-    &:after {
-      opacity: 1;
-      transform: translateY(0) rotateX(0);
-    }
-
-    &:before {
-      opacity: 0;
-      transform: translateY(50%) rotateX(90deg);
-    }
-  }
-
-  &:after {
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    color: #323237;
-    display: block;
-    transition: $speed;
-    position: absolute;
-    background: #adadaf;
-    content: attr(data-back);
-    transform: translateY(-50%) rotateX(90deg);
-  }
-
-  &:before {
-    top: 0;
-    left: 0;
-    opacity: 1;
-    color: #adadaf;
-    display: block;
-    padding: 0 30px;
-    line-height: 40px;
-    transition: $speed;
-    position: relative;
-    background: #323237;
-    content: attr(data-front);
-    transform: translateY(0) rotateX(0);
+    background-position: 120px;
+    text-shadow: 2px 2px 0.2em #000;
   }
 }
