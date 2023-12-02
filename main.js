@@ -122,7 +122,7 @@
 
     const homeworldsRaw = [];
     for (const character of characters) {
-      homeworldsRaw.push {character.homeworld ?? "other"};
+      homeworldsRaw.push(character.homeworld ?? "other");
     }
 
     const homeworldsUnique = [...new Set(homeworldsRaw)];
@@ -155,7 +155,7 @@ let filter_value = null;
 
 for (const radio of radios) {
   radio.addEventListener("change", function (e) {
-    console.log(e);
+  
 filter_value = e.target.value;
 removeCharacters();
 renderCharacters();
@@ -184,22 +184,18 @@ renderCharacters();
   <div class="card-body">
     <h5 class="card-title">${character.name}</h5>
     <p class="card-text">${homeworld_name_lowercase}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
   </div>
 </div>`;
 row_element.innerHTML = row_element.innerHTML + CharacterCard;
 }
-toggle_button.innerHTML = "Karakterleri Gizle";
-toggle_button.style.backgroundColor ="red";
-toggle_button.onclick = removeCharacters;
-
     
+toggle_button.innerHTML = "Karakterleri Gizle";
+toggle_button.style.backgroundColor = "red";
+toggle_button.onclick = removeCharacters;
+}
+content_wrapper.appendChild(row_element); 
   }
-  }
-
-    content_wrapper.appendChild(row_element);
-
     function removeCharacters() {
       content_wrapper.innerHTML = "";
       toggle_button.onclick = renderCharacters;
