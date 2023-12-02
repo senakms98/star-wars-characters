@@ -1,0 +1,15 @@
+
+
+body {
+    background-image: url("sww.jpg");
+    background-repeat: repeat;
+  }
+
+  .toggle-button {
+    display: flex;
+    background-color: #716eef;
+    color: #000;
+    justify-content: center;
+  }
+  
+  

@@ -140,12 +140,11 @@
 
     for (const homeworld of homeworlds) {
       const RadioElement = ` 
-<div class="container mt-5 bg-white w-100 justify-content-center align-items-center d-inline-flex">
-      <div class="form-check">
-      <input value="${homeworld}" class="form-check-input d-inline-flex" type="radio" name="homeworld-radio" id="radio-${homeworld}">
-      <label class="form-check-label" for="radio-${homeworld}">${homeworld}</label>
-      </div>
-      </div>
+      <div class="form-check-inline">
+      <input class="form-check-input mx-2" type="radio" name="homeworld" value="${homeworld}"  id="homeworld-${homeworld}">
+      <label class="form-check-label" for=""homeworld-${homeworld}"">${homeworld}
+      </label>
+    </div>
       `;
 
 filters_element.innerHTML += RadioElement;
@@ -180,7 +179,7 @@ renderCharacters();
 
       if (homeworld_name_lowercase === filter_value || filter_value === null) { 
       const CharacterCard = `
-      <div class="col-4">
+      <div class="col-4 mt-5">
       <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="${character.pic}" alt="Card image cap">
   <div class="card-body">
