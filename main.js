@@ -191,7 +191,7 @@ row_element.innerHTML = row_element.innerHTML + CharacterCard;
 }
     
 toggle_button.innerHTML = "Karakterleri Gizle";
-toggle_button.style.backgroundColor = "red";
+
 toggle_button.onclick = removeCharacters;
 }
 content_wrapper.appendChild(row_element); 
@@ -199,6 +199,6 @@ content_wrapper.appendChild(row_element);
     function removeCharacters() {
       content_wrapper.innerHTML = "";
       toggle_button.onclick = renderCharacters;
-      toggle_button.style.backgroundColor ="green";
+      
       toggle_button.innerText = "Karakterleri Göster";
     }
